@@ -3,8 +3,6 @@ const router = express.Router();
 const userDb = require("./userDb");
 const postDb = require("../posts/postDb");
 
-router.use(express.json());
-
 router.post('/', validateUser, (req, res) => {
   const newUserInfo = req.body;
 

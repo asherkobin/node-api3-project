@@ -3,6 +3,7 @@ const server = express();
 const userRouter = require("./users/userRouter");
 const postRouter = require("./posts/postRouter");
 
+server.use(express.json());
 server.use(logger);
 
 server.get('/', (req, res) => {

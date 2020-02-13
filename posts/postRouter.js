@@ -39,7 +39,7 @@ router.delete('/:id', validatePostId, (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', validatePostId, (req, res) => {
   const postId = req.params.id;
   const updatedPostInfo = req.body;
 
